@@ -13,8 +13,6 @@ func main(){
 	fmt.Sprintf("hello")
 
 
-	fmt.Sprintf("hello")
-
 	println(test_Functoin())
 
 
