@@ -15,4 +15,4 @@ jobs:
           github_token: ${{ secrets.github_token }}
           golangci_lint_flags: "--disable-all -E misspell ./src"
           tool_name: misspell
-          level: info
+          level: error
