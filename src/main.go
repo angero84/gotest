@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func test_Func() string {
+func test_Functoin() string {
 
 	return "my mame is kim"
 }
@@ -22,8 +22,8 @@ func main(){
 	println("hello2")
 	println("hello worl")
 
-	println(test_Func())
-	println(test_Func())
+	println(test_Functoin())
+	println(test_Functoin())
 
 
 
