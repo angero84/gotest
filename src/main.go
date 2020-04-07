@@ -3,6 +3,7 @@ package main
 import (
 	"errors"
 	"fmt"
+	"os"
 )
 
 type testStruct struct {
@@ -43,5 +44,11 @@ func main(){
 	println(test_Functoin())
 
 	println(ts.field1)
+
+	x    := 1
+	x += 1
+	fmt.Sprintf("%d")
+
+	os.Open("main.go")
 
 }
