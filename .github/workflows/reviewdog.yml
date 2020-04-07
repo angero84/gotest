@@ -13,6 +13,6 @@ jobs:
         uses: docker://reviewdog/action-golangci-lint:v1 # Pre-built image
         with:
           github_token: ${{ secrets.github_token }}
-          golangci_lint_flags: "--disable-all -E misspell ./src"
-          tool_name: misspell
+          golangci_lint_flags: "--enable-all --exclude-use-default=false ./src"
+          tool_name: all-in-one
           level: error
