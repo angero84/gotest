@@ -40,7 +40,7 @@ func main(){
 	println(testMsg)
 
 	println(test_Functoin())
-	println(test_Functoin())
+	
 	println(ts.field1)
 
 }
