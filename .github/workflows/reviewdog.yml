@@ -3,16 +3,16 @@ on: [pull_request]
 jobs:
   # NOTE: golangci-lint doesn't report multiple errors on the same line from
   # different linters and just report one of the errors?
-  golangci-lint-all-in-one:
-    name: runner / golangci-lint-all-in-one
+  golangci-lint-github-pr-review:
+    name: runner / golangci-lint (github-pr-review)
     runs-on: ubuntu-latest
     steps:
       - name: Check out code into the Go module directory
         uses: actions/checkout@v1
-      - name: golangci-lint w/ all-in-one-review
+      - name: golangci-lint w/ github-pr-review
         uses: docker://reviewdog/action-golangci-lint:v1 # Pre-built image
         with:
           github_token: ${{ secrets.github_token }}
-          golangci_lint_flags: "--enable-all --exclude-use-default=false ./src"
-          reporter: "all-in-one-review"
-          level: error
+          golangci_lint_flags: "./src"
+          tool_name: "golangci-lint-github-pr-review"
+          reporter: "github-pr-review"
