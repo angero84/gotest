@@ -23,6 +23,7 @@ func main(){
 	println("hello worl")
 
 	println(test_Func())
+	println(test_Func())
 
 
 
