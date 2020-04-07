@@ -7,7 +7,8 @@ func main(){
 
 	fmt.Sprintf("hello")
 	println("hello world")
-	printl("hello2")
+	println("hello2")
+	printl("hello worl")
 
 
 }
