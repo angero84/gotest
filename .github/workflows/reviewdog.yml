@@ -16,3 +16,4 @@ jobs:
           golangci_lint_flags: "./src"
           tool_name: "golangci-lint-github-pr-review"
           reporter: "github-pr-review"
+          level: error
