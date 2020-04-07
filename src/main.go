@@ -27,8 +27,8 @@ func unused() {
 
 func main(){
 
-	//this is test commentary, languge
-	fmt.Sprintf("hello")
+	//this is test commentary, langauge
+	fmt.Sprintf("hello langauge")
 
 	ts := &testStruct{
 		field1:"test",
