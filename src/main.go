@@ -14,6 +14,7 @@ func main(){
 
 
 	println(test_Functoin())
+	println(test_Functoin())
 
 
 
