@@ -10,7 +10,7 @@ func main(){
 	println("hello2")
 	println("hello worl")
 
-	var temp_name int
+	
 
 	fmt.Sprintf("hello")
 	println("hello world")
