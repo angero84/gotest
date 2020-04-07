@@ -14,5 +14,6 @@ jobs:
         with:
           github_token: ${{ secrets.github_token }}
           golangci_lint_flags: "--enable-all --exclude-use-default=false ./src"
-          tool_name: all-in-one
+          tool_name: "all-in-one"
+          reporter: "all-in-one-review"
           level: error
