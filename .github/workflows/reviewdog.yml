@@ -15,7 +15,7 @@ jobs:
         uses: docker://reviewdog/action-golangci-lint:v1 # Pre-built image
         with:
           github_token: ${{ secrets.github_token }}
-          golangci_lint_flags: "--config=.github/.golangci.yml ./testdata"
+          golangci_lint_flags: "--config=.github/.golangci.yml ./src"
 
   golangci-lint-dockerfile:
     name: runner / golangci-lint (Dockerfile)
@@ -28,7 +28,7 @@ jobs:
         # uses: docker://reviewdog/action-golangci-lint:v1 # Pre-built image
         with:
           github_token: ${{ secrets.github_token }}
-          golangci_lint_flags: "./testdata"
+          golangci_lint_flags: "./src"
           tool_name: "golangci-lint-dockerfile"
 
   golangci-lint-github-pr-review:
@@ -41,7 +41,7 @@ jobs:
         uses: ./ # Build with Dockerfile
         with:
           github_token: ${{ secrets.github_token }}
-          golangci_lint_flags: "./testdata"
+          golangci_lint_flags: "./src"
           tool_name: "golangci-lint-github-pr-review"
           reporter: "github-pr-review"
 
@@ -55,7 +55,7 @@ jobs:
         uses: ./ # Build with Dockerfile
         with:
           github_token: ${{ secrets.github_token }}
-          golangci_lint_flags: "./testdata"
+          golangci_lint_flags: "./src"
           tool_name: "golangci-lint-github-check"
           level: warning
           reporter: "github-check"
@@ -70,7 +70,7 @@ jobs:
         uses: docker://reviewdog/action-golangci-lint:v1
         with:
           github_token: ${{ secrets.github_token }}
-          golangci_lint_flags: "--enable-all --exclude-use-default=false ./testdata"
+          golangci_lint_flags: "--enable-all --exclude-use-default=false ./src"
 
   govet:
     name: runner / govet
@@ -82,7 +82,7 @@ jobs:
         uses: docker://reviewdog/action-golangci-lint:v1
         with:
           github_token: ${{ secrets.github_token }}
-          golangci_lint_flags: "--disable-all -E govet ./testdata"
+          golangci_lint_flags: "--disable-all -E govet ./src"
           tool_name: govet
 
   staticcheck:
@@ -95,7 +95,7 @@ jobs:
         uses: docker://reviewdog/action-golangci-lint:v1
         with:
           github_token: ${{ secrets.github_token }}
-          golangci_lint_flags: "--disable-all -E staticcheck ./testdata"
+          golangci_lint_flags: "--disable-all -E staticcheck ./src"
           tool_name: staticcheck
 
   golint:
@@ -108,7 +108,7 @@ jobs:
         uses: docker://reviewdog/action-golangci-lint:v1
         with:
           github_token: ${{ secrets.github_token }}
-          golangci_lint_flags: "--disable-all -E golint ./testdata"
+          golangci_lint_flags: "--disable-all -E golint ./src"
           tool_name: golint
           level: warning
 
@@ -122,7 +122,7 @@ jobs:
         uses: docker://reviewdog/action-golangci-lint:v1
         with:
           github_token: ${{ secrets.github_token }}
-          golangci_lint_flags: "--disable-all -E errcheck ./testdata"
+          golangci_lint_flags: "--disable-all -E errcheck ./src"
           tool_name: errcheck
           level: warning
 
@@ -136,6 +136,6 @@ jobs:
         uses: docker://reviewdog/action-golangci-lint:v1
         with:
           github_token: ${{ secrets.github_token }}
-          golangci_lint_flags: "--disable-all -E misspell ./testdata"
+          golangci_lint_flags: "--disable-all -E misspell ./src"
           tool_name: misspell
           level: info
